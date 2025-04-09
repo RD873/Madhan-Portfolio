@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKILLS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            color: #222;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 17px;
+            transition: color 0.3s ease;
+        }
+        nav a.active, nav a:hover {
+            color: #e94e77;
+        }
+        .carousel {
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .list {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: hidden;
+            scroll-behavior: smooth;
+            max-width: 90vw;
+        }
+        .item {
+            flex: 0 0 300px;
+            margin: 0 20px;
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+            color: #333;
+        }
+        .item:hover {
+            transform: scale(1.05);
+        }
+        .item img {
+            max-width: 90px;
+            margin-bottom: 15px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #e94e77;
+        }
+        .topic {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+        .des {
+            font-size: 16px;
+            color: #666;
+        }
+        .seeMore {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #e94e77;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        .seeMore:hover {
+            background-color: #d73763;
+        }
+        .detail {
+            margin-top: 15px;
+            text-align: left;
+        }
+        .specifications p {
+            background: #f7d9cd;
+            padding: 8px 12px;
+            border-radius: 6px;
+            margin: 6px 0;
+            font-size: 14px;
+            color: #444;
+        }
+        .arrows {
+            margin-top: 30px;
+        }
+        .arrows button {
+            padding: 10px 15px;
+            margin: 0 5px;
+            font-size: 18px;
+            cursor: pointer;
+            background: transparent;
+            border: 2px solid #e94e77;
+            border-radius: 10px;
+            color: #e94e77;
+            font-weight: bold;
+        }
+        .arrows button:hover {
+            background: #e94e77;
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            .item {
+                flex: 0 0 250px;
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="name">MADHAN KUMAR R</div>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="skills.html" class="active">SKILLS</a>
+            <a href="assi.html">ASSIGNMENT</a>
+            <a href="contact .html">CONTACT</a>
+        </nav>
+    </header>
+
+    <div class="carousel">
+        <div class="list" id="carousel">
+            <div class="carousel">
+                <div class="list">
+                 <div class="item">
+                            <img src="ASSETS\IMAGES\html_logo-removebg-preview.png">
+                            <div class="introduce">
+                                <div class="title">WEB DEVELOPER</div>
+                                <div class="topic">HTML</div>
+                                <div class="des">
+                                    That’s fantastic! HTML (HyperText Markup Language) is the backbone of web content, allowing you to structure and present your web pages with elements like headings, paragraphs, links, and images
+                                </div>
+                            </div>
+                            <div class="detail">
+                                <div class="title">HTML</div>
+                                <div class="des">
+                                    It’s a vital skill for anyone delving into web development, and knowing HTML opens the door to designing and coding beautiful, functional websites.
+                                </div>
+                                <div class="specifications">
+                                    <div>
+                                        <p>HTML Basic Tags</p>
+                                    </div>
+                                    <div>
+                                        <p>HTML Container</p>
+                                    </div>
+                                    <div>
+                                        <p>HTML Links</p>
+                                    </div>
+                                    <div>
+                                        <p>HTML Images</p>
+                                    </div>
+                                    <div>
+                                        <p>HTML Forms</p>
+                                    </div>
+                                    <div>
+                                        <p>HTML intermediate</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="item">
+                            <img src="ASSETS\IMAGES\css.png">
+                            <div class="introduce">
+                                <div class="title">WEB STYLING</div>
+                                <div class="topic">CSS</div>
+                                <div class="des">
+                                    CSS (Cascading Style Sheets) is the superhero of web design! It allows you to control the presentation, layout, and overall look and feel of your web pages.
+                                </div>
+                                
+                            </div>
+                            <div class="detail">
+                                <div class="title">CSS (style sheet) </div>
+                                <div class="des">
+                                    With CSS, you can add colors, fonts, spacing, and even animations to make your website visually appealing and user-friendly. It works hand-in-hand with HTML to create a polished and dynamic web experience.
+                                </div>
+                                <div class="specifications">
+                                    <div>
+                                        <p>CSS selectors</p>
+                                    </div>
+                                    <div>
+                                        <p>Property and Values</p>
+                                    </div>
+                                    <div>
+                                        <p>CSS Types</p>
+                                    </div>
+                                    <div>
+                                        <p>key frame </p>
+                                    </div>
+                                    <div>
+                                        <p>Responsive</p>
+                                    </div>
+                                    <div>
+                                        <p>pesudo CSS Selector</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="item">
+                            <img src="ASSETS/images/JavaScript-Symbol.png">
+                            <div class="introduce">
+                                <div class="title">DYNAMIC WEB</div>
+                                <div class="topic">JavaScript</div>
+                                <div class="des">
+                                    JavaScript is the magic behind dynamic and interactive web pages. It's a versatile, high-level programming language that allows you to add complex features like interactive forms, animations, real-time updates, and more.
+                                </div>
+                              
+                            </div>
+                            <div class="detail">
+                                <div class="title">Java Script (JS) </div>
+                                <div class="des">
+                                    JavaScript works seamlessly with HTML and CSS to create a richer user experience on the web. Whether you're making a simple game or a sophisticated web application, JavaScript is an essential tool in your coding arsenal.
+                                </div>
+                                <div class="specifications">
+                                    <div>
+                                        <p>Java Script basics</p>
+                                    </div>
+                                    <div>
+                                        <p>Classes and Objects</p>
+                                    </div>
+                                    <div>
+                                        <p>Functions</p>
+                                    </div>
+                                    <div>
+                                        <p>HTML DOM</p>
+                                    </div>
+                                    <div>
+                                        <p>JS JSON</p>
+                                    </div>
+                                    <div>
+                                        <p>JS Problems</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="item">
+                            <img src="ASSETS/images/th-removebg-preview-removebg-preview.png">
+                            <div class="introduce">
+                                <div class="title">PROGRAMMING</div>
+                                <div class="topic">C++</div>
+                                <div class="des">
+                                    C++ is a powerful, general-purpose programming language that was developed by Bjarne Stroustrup in 1983. It's an extension of the C programming language, with additional features that make it suitable for a variety of software development tasks.
+                                </div>
+                             
+                            </div>
+                            <div class="detail">
+                                <div class="title">C++ </div>
+                                <div class="des">
+                                    C++ supports OOP concepts like classes, inheritance, polymorphism, and encapsulation, making it easier to manage and organize complex software projects.
+                                </div>
+                                <div class="specifications">
+                                    <div>
+                                        <p>Programming</p>
+                                    </div>
+                                    <div>
+                                        <p>OOPS Concept</p>
+                                    </div>
+                                    <div>
+                                        <p>Abstraction</p>
+                                    </div>
+                                    <div>
+                                        <p>Data Hiding</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="ASSETS\IMAGES\python-removebg-preview.png">
+                            <div class="introduce">
+                                <div class="title">PROGRAMMING LANGUAGE</div>
+                                <div class="topic">Python</div>
+                                <div class="des">
+                                    Python is a high-level, versatile programming language that's renowned for its simplicity and readability. It's widely used in web development, data analysis, artificial intelligence, scientific computing, and more.
+                                </div>
+                                
+                            </div>
+                            <div class="detail">
+                                <div class="title">Python</div>
+                                <div class="des">
+                                    Python's extensive libraries and frameworks, such as Django and TensorFlow, enable developers to build applications efficiently and effectively. Its ease of learning and powerful capabilities make it a popular choice for both beginners and experienced programmers alike.
+                                </div>
+                                <div class="specifications">
+                                    <div>
+                                        <p>Python Concepts</p>
+                                    </div>
+                                    <div>
+                                        <p>Functions</p>
+                                    </div>
+                                    <div>
+                                        <p>Object oriented Programming</p>
+                                    </div>
+                                    <div>
+                                        <p>Data Structures</p>
+                                    </div>
+                                    <div>
+                                        <p>Problems</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- Skill items will be dynamically inserted here -->
+                </div><!-- Your skill items -->
+            <!-- Keep your skill items here (as in your original HTML) -->
+            <!-- ... Pasting your same skill cards ... -->
+            <!-- Add all .item blocks here from your previous code -->
+            <!-- (HTML, CSS, JS, C++, Python items go here) -->
+            <!-- Paste your <div class="item"> blocks here -->
+        </div>
+
+    </div>
+
+    <script>
+        const carousel = document.getElementById('carousel');
+        const prevBtn = document.getElementById('prev');
+        const nextBtn = document.getElementById('next');
+
+        const scrollAmount = 320; // Adjust based on item width + margin
+
+        nextBtn.addEventListener('click', () => {
+            carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', () => {
+            carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
+

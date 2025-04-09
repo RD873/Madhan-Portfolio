@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ASSIGNMENTS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #dbe6f6 0%, #c5796d 100%);
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    header {
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      color: #1d1a1a;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .name {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 17px;
+      transition: color 0.3s ease;
+    }
+
+    nav a.active, nav a:hover {
+      color: #ff6600;
+    }
+
+    .carousel {
+      height: calc(100vh - 100px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .assignment-container {
+      width: 100%;
+      max-width: 1000px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .item {
+      background: white;
+      padding: 50px;
+      border-radius: 25px;
+      box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+      max-width: 800px;
+      width: 100%;
+      height: auto;
+      max-height: 80vh;
+      overflow-y: auto;
+      transition: all 0.5s ease;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      display: none;
+    }
+
+    .item.active {
+      display: block;
+    }
+
+    .item img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+    }
+
+    .title {
+      font-size: 30px;
+      font-weight: 700;
+      color: #ff6600;
+      margin-bottom: 12px;
+    }
+
+    .topic {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .des {
+      font-size: 17px;
+      color: #444;
+      line-height: 1.6;
+    }
+
+    .arrows {
+      position: absolute;
+      bottom: 30px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      gap: 15px;
+    }
+
+    .arrows button {
+      padding: 12px 24px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      background-color: #ff6600;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      transition: background-color 0.3s;
+    }
+
+    .arrows button:hover {
+      background-color: #e65c00;
+    }
+
+    @media screen and (max-width: 768px) {
+      .item {
+        padding: 30px 20px;
+      }
+      .item img {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="name">MADHAN KUMAR R</div>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="skills.html">SKILLS</a>
+      <a href="assignments.html" class="active">ASSIGNMENTS</a>
+      <a href="contact .html">CONTACT</a>
+    </nav>
+  </header>
+
+  <div class="carousel">
+    <div class="assignment-container">
+      <!-- Assignment 1 -->
+      <div class="item active">
+        <img src="ASSETS/images/Screenshot 2025-03-12 204536.png" alt="Fusion 360">
+        <div class="title">3D Modelling</div>
+        <div class="topic">Fusion 360</div>
+        <div class="des">Create 3D models of various objects and learn how to use Fusion 360 effectively. This assignment focuses on developing CAD design skills and exporting models for 3D printing or simulations.</div>
+      </div>
+
+      <!-- Assignment 2 -->
+      <div class="item">
+        <img src="ASSETS/images/mq-7-carbon-monoxide-gas-sensor.jpg" alt="Arduino Project">
+        <div class="title">IoT Project</div>
+        <div class="topic">Carbon Monoxide Detection</div>
+        <div class="des">Built using MQ-7 sensor and NodeMCU ESP8266. Carbon monoxide levels are monitored and logged live into Google Sheets using Firebase and Google Apps Script for real-time analysis and safety monitoring.</div>
+      </div>
+    </div>
+
+    <div class="arrows">
+      <button id="prevBtn">&lt; Prev</button>
+      <button id="nextBtn">Next &gt;</button>
+    </div>
+  </div>
+
+  <script>
+    const items = document.querySelectorAll(".item");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
+    let currentIndex = 0;
+
+    function showItem(index) {
+      items.forEach((item, i) => {
+        item.classList.remove("active");
+        if (i === index) item.classList.add("active");
+      });
+    }
+
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + items.length) % items.length;
+      showItem(currentIndex);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % items.length;
+      showItem(currentIndex);
+    });
+  </script>
+</body>
+</html>

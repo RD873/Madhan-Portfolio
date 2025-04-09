@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>MADHAN KUMAR R</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .name {
+            font-size: 26px;
+            font-weight: 600;
+            color: #222;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a.active,
+        nav a:hover {
+            color: #e94e77;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .profile-card {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .profile-card img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        h1 span {
+            color: #e94e77;
+        }
+
+        .typing {
+            font-size: 18px;
+            font-weight: bold;
+            color: #e94e77;
+            margin-bottom: 10px;
+        }
+
+        .profile-card p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #777;
+            font-size: 22px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #e94e77;
+        }
+
+        .hire-me {
+            margin-top: 25px;
+            padding: 10px 25px;
+            border: none;
+            background-color: #e94e77;
+            color: #fff;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .hire-me:hover {
+            background-color: #d73763;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+
+            .profile-card {
+                padding: 30px 20px;
+            }
+        }
+        body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    color: #333;
+    min-height: 100vh;
+    font-size: 18px; /* was 16px */
+}
+
+.name {
+    font-size: 30px; /* was 26px */
+}
+
+nav a {
+    font-size: 18px; /* was 16px */
+}
+
+.profile-card {
+    padding: 50px 40px; /* was 40px */
+    max-width: 800px; /* was 700px */
+}
+
+.profile-card img {
+    width: 200px; /* was 180px */
+    height: 200px;
+}
+
+h1 {
+    font-size: 32px; /* was 28px */
+}
+
+.typing {
+    font-size: 20px; /* was 18px */
+}
+
+.profile-card p {
+    font-size: 18px; /* was 16px */
+}
+
+.social-icons a {
+    font-size: 26px; /* was 22px */
+}
+
+.hire-me {
+    font-size: 18px; /* was 16px */
+    padding: 12px 30px;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="name">MADHAN KUMAR R</div>
+        <nav>
+            <a href="home" class="active" onclick="setActive(this)">HOME</a>
+            <a href="skills.html" onclick="setActive(this)">SKILLS</a>
+            <a href="assi.html" onclick="setActive(this)">ASSIGNMENT</a>
+            <a href="contact .html" onclick="setActive(this)">CONTACT</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="profile-card">
+            <img src="ASSETS/images/WhatsApp Image 2025-02-24 at 15.06.04_e28e0644.jpg" alt="Profile">
+            <h1>I am <span>MADHAN KUMAR R</span></h1>
+            <p class="typing" id="typing"></p>
+            <p>
+                I am an Electronics And Communication engineer, currently in 3rd year at Government College Of Engineering, Salem. I have knowledge in Network Theory and possess leadership qualities. I'm passionate about Embedded Systems.
+            </p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/madhan-kumar-r-3b897a301" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:rjmadhankumar27@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://wa.me/917418870807"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <button class="hire-me">Hire Me</button>
+        </div>
+    </div>
+
+    <script>
+        const textArray = ['Web Developer', 'Circuit Designer', 'Electronics Engineer'];
+        let currentIndex = 0;
+        let letterIndex = 0;
+        let currentText = '';
+
+        function typeText() {
+            currentText = textArray[currentIndex];
+            document.getElementById('typing').textContent = `I am a ${currentText.slice(0, letterIndex)}`;
+
+            if (letterIndex < currentText.length) {
+                letterIndex++;
+                setTimeout(typeText, 100);
+            } else {
+                setTimeout(eraseText, 1500);
+            }
+        }
+
+        function eraseText() {
+            document.getElementById('typing').textContent = `I am a ${currentText.slice(0, letterIndex)}`;
+
+            if (letterIndex > 0) {
+                letterIndex--;
+                setTimeout(eraseText, 50);
+            } else {
+                currentIndex = (currentIndex + 1) % textArray.length;
+                setTimeout(typeText, 500);
+            }
+        }
+
+        function setActive(element) {
+            document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        typeText();
+    </script>
+
+</body>
+</html>
